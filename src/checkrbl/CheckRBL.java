@@ -31,7 +31,7 @@ import org.apache.commons.cli.ParseException;
  *
  * @author utente
  */
-public class CheckRBL implements callbackPrint {
+public class CheckRBL implements CallbackAction {
 
     /**
      * Map of the results; key = resource as specified by arguments or generated

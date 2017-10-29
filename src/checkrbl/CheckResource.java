@@ -54,7 +54,7 @@ public abstract class CheckResource {
      * @param callback A callback that is called for every list item processed
      * @return A list of exits codes
      */
-    public List<String> checkResources(List<String> resources, callbackPrint callback) {
+    public List<String> checkResources(List<String> resources, CallbackAction callback) {
         List<String> resultCodes = new ArrayList<>();
         String result = null;
         for (String resource : resources) {

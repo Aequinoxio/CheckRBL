@@ -6,7 +6,6 @@
 package checkrbl;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -47,7 +46,7 @@ public class checkSpamhausTest {
     public void testCheckDomain() {
         System.out.println("checkDomain");
         String domain = "mailagenziaentrate05.top";
-        CheckSpamhaus instance = new CheckSpamhaus();
+        CheckSpamhaus instance = new CheckSpamhaus("Spamhaus");
         String expResult = "";
         String result = instance.checkDomain(domain);
         System.out.print(domain+" - ");
@@ -64,7 +63,7 @@ public class checkSpamhausTest {
     public void testCheckIP() {
         System.out.println("checkIP");
         String ip = "47.91.145.170";
-        CheckSpamhaus instance = new CheckSpamhaus();
+        CheckSpamhaus instance = new CheckSpamhaus("Spamhaus");
         String expResult = "";
         String result = instance.checkIp(ip);
         System.out.print(ip+" - ");
