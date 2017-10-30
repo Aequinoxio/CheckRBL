@@ -1,0 +1,22 @@
+@startuml
+abstract class checkrbl.CheckResource
+annotation java.lang.Override
+class checkrbl.CheckRBL
+class checkrbl.CheckSpameatingmonkey
+class checkrbl.CheckSpamhaus
+class checkrbl.Provider
+enum checkrbl.CheckType
+interface checkrbl.CallbackAction
+checkrbl.CheckRBL --|> checkrbl.CallbackAction
+checkrbl.CheckSpameatingmonkey --|> checkrbl.CheckResource
+checkrbl.CheckSpameatingmonkey ..> java.lang.Override
+checkrbl.CheckSpameatingmonkey ..> java.net.InetAddress
+checkrbl.CheckSpameatingmonkey ..> java.net.UnknownHostException
+checkrbl.CheckSpamhaus --|> checkrbl.CheckResource
+checkrbl.CheckSpamhaus ..> java.lang.Override
+checkrbl.CheckSpamhaus ..> java.net.InetAddress
+checkrbl.CheckSpamhaus ..> java.net.UnknownHostException
+checkrbl.CheckSpamhaus ..> java.util.Collections
+checkrbl.CheckSpamhaus ..> java.util.HashMap
+checkrbl.CheckSpamhaus ..> java.util.Map
+@enduml
